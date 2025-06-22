@@ -1,0 +1,69 @@
+# Gem artifacts
+*.gem
+.bundle
+vendor/
+pkg/
+
+# Bundler
+Gemfile.lock
+
+# Ruby version managers  
+.rvmrc
+.ruby-gemset
+.ruby-version
+
+# Ruby LSP (VS Code extension)
+.ruby-lsp/
+
+# RSpec
+spec/reports/
+coverage/
+.rspec_status
+
+# RuboCop
+.rubocop-*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+log/
+
+# Temporary files
+tmp/
+.tmp/
+*.tmp
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Documentation (generated)
+doc/
+.yardoc/
+
+# Test artifacts
+test/tmp/
+test/version_tmp/
+
+# Cache
+.cache/
+
+# Build artifacts
+build/
+dist/
