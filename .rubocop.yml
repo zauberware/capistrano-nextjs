@@ -1,0 +1,43 @@
+AllCops:
+  TargetRubyVersion: 3.2
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'pkg/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+    - 'lib/capistrano/tasks/*.rake'
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Layout/EndOfLine:
+  Enabled: true
+  EnforcedStyle: lf
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: ruby19_no_mixed_keys

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :deploy do
   before :starting, :check_payloadcms_hooks do
     invoke 'payloadcms:add_default_hooks' if fetch(:payloadcms_default_hooks)

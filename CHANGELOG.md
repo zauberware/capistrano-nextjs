@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Service management tasks (start, stop, restart, status)
 - Installation and uninstallation of systemd services
 - Database migration support before build process
+- RuboCop integration for code quality and style enforcement
 
 ### Features
 
@@ -29,8 +30,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Logging configuration
 - Background process management
 - Optimized deployment flow: migrate → build → deploy
+- Code linting and formatting with RuboCop
 
 ### Changed
 
 - Reordered deployment hooks to run migrations before build process
 - Improved deployment sequence for better reliability
+- Added RuboCop configuration and fixed all linting issues
+- Moved development dependencies from gemspec to Gemfile
+- Added MFA requirement for gem publishing

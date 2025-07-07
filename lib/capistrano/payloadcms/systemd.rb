@@ -42,8 +42,8 @@ module Capistrano
         end
       end
 
-      def execute_systemd(*args)
-        sudo_if_needed(*systemd_command(*args))
+      def execute_systemd(*)
+        sudo_if_needed(*systemd_command(*))
       end
     end
   end

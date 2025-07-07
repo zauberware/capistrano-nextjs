@@ -126,16 +126,16 @@ namespace :payloadcms do
   end
 
   def payloadcms_service_unit_name(config_file)
-    if config_file != 'payloadcms.yml'
-      fetch(:payloadcms_service_unit_name) + '.' + config_file.split('.')[0..-2].join('.')
-    else
+    if config_file == 'payloadcms.yml'
       fetch(:payloadcms_service_unit_name)
+    else
+      "#{fetch(:payloadcms_service_unit_name)}.#{config_file.split('.')[0..-2].join('.')}"
     end
   end
 
   def payloadcms_service_file_name(config_file)
     ## Remove the extension
-    config_file = config_file.split('.')[0..-1].join('.')
+    config_file = config_file.split('.').join('.')
 
     "#{payloadcms_service_unit_name(config_file)}.service"
   end

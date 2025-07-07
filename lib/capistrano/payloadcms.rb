@@ -53,12 +53,12 @@ module Capistrano
       '' # Payload CMS doesn't use config files like Sidekiq
     end
 
-    def switch_user(role, &block)
+    def switch_user(role, &)
       su_user = payloadcms_user(role)
       if su_user == role.user
         yield
       else
-        as su_user, &block
+        as(su_user, &)
       end
     end
 
