@@ -13,11 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Payload CMS application deployment support with Capistrano
 - Systemd service integration for Payload CMS applications
 - Support for pnpm package manager
-- Automatic build and deployment hooks
+- Automatic build and deployment hooks with proper sequencing
 - Graceful shutdown support
 - Environment variable management
 - Service management tasks (start, stop, restart, status)
 - Installation and uninstallation of systemd services
+- Database migration support before build process
 
 ### Features
 
@@ -27,3 +28,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - User and system service support
 - Logging configuration
 - Background process management
+- Optimized deployment flow: migrate → build → deploy
+
+### Changed
+
+- Reordered deployment hooks to run migrations before build process
+- Improved deployment sequence for better reliability

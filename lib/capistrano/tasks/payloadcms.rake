@@ -6,8 +6,8 @@ end
 
 namespace :payloadcms do
   task :add_default_hooks do
-    after 'pnpm:install', 'payloadcms:build'
-    after 'payloadcms:build', 'payloadcms:migrate'
+    after 'pnpm:install', 'payloadcms:migrate'
+    after 'payloadcms:migrate', 'payloadcms:build'
     # after 'deploy:starting', 'payloadcms:quiet' if Rake::Task.task_defined?('payloadcms:quiet')
     after 'deploy:updated', 'payloadcms:stop'
     after 'deploy:published', 'payloadcms:start'
