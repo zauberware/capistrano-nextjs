@@ -1,13 +1,13 @@
-# Capistrano::NextJS
+# Capistrano::PayloadCMS
 
-NextJS integration for Capistrano with systemd support.
+Payload CMS integration for Capistrano with systemd support.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capistrano-nextjs'
+gem 'capistrano-payloadcms'
 ```
 
 And then execute:
@@ -22,29 +22,29 @@ Add the following to your `Capfile`:
 
 ```ruby
 require 'capistrano/pnpm'
-require 'capistrano/nextjs'
-install_plugin Capistrano::NextjsPlugin
-install_plugin Capistrano::NextjsSystemd
+require 'capistrano/payloadcms'
+install_plugin Capistrano::PayloadcmsPlugin
+install_plugin Capistrano::PayloadcmsSystemd
 ```
 
 Add the following to your `config/deploy.rb`:
 
 ```ruby
-# NextJS configuration
-set :nextjs_roles, :app
-set :nextjs_env, fetch(:stage)
+# Payload CMS configuration
+set :payloadcms_roles, :app
+set :payloadcms_env, fetch(:stage)
 ```
 
 ## Available Tasks
 
-- `cap nextjs:start` - Start NextJS application
-- `cap nextjs:stop` - Stop NextJS application
-- `cap nextjs:restart` - Restart NextJS application
-- `cap nextjs:status` - Check NextJS application status
-- `cap nextjs:install` - Install systemd service
-- `cap nextjs:uninstall` - Uninstall systemd service
-- `cap nextjs:build` - Build NextJS application
-- `cap nextjs:check` - Check NextJS application (lint)
+- `cap payloadcms:start` - Start Payload CMS application
+- `cap payloadcms:stop` - Stop Payload CMS application
+- `cap payloadcms:restart` - Restart Payload CMS application
+- `cap payloadcms:status` - Check Payload CMS application status
+- `cap payloadcms:install` - Install systemd service
+- `cap payloadcms:uninstall` - Uninstall systemd service
+- `cap payloadcms:build` - Build Payload CMS application
+- `cap payloadcms:check` - Check Payload CMS application (lint)
 
 ## Configuration
 

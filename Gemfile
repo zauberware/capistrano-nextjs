@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in capistrano-nextjs.gemspec
+# Specify your gem's dependencies in capistrano-payloadcms.gemspec
 gemspec

@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'lib/capistrano/nextjs/version'
+require_relative 'lib/capistrano/payloadcms/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'capistrano-nextjs'
-  spec.version = Capistrano::Nextjs::VERSION
+  spec.name = 'capistrano-payloadcms'
+  spec.version = Capistrano::Payloadcms::VERSION
   spec.authors = ['Florian Crusius']
   spec.email = ['florian@zauberware.com']
-  spec.description = 'Next.js integration for Capistrano with systemd support, enabling automated deployment and service management for Next.js applications using pnpm'
-  spec.summary = 'Next.js integration for Capistrano'
-  spec.homepage = 'https://github.com/zauberware/capistrano-nextjs'
+  spec.description = 'Payload CMS integration for Capistrano with systemd support, enabling automated deployment and service management for Payload CMS applications using pnpm'
+  spec.summary = 'Payload CMS integration for Capistrano'
+  spec.homepage = 'https://github.com/zauberware/capistrano-payloadcms'
   spec.license = 'LGPL-3.0'
 
   spec.required_ruby_version = '>= 3.2.7'

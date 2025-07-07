@@ -1,0 +1,23 @@
+
+[Unit]
+Description=Payload CMS for <%= "#{fetch(:application)} (#{fetch(:stage)})" %>
+# start us only once the network and logging subsystems are available
+After=syslog.target network.target
+
+[Service]
+Type=simple
+<%="User=#{payloadcms_user}" if fetch(:payloadcms_systemctl_user) == :system %>
+WorkingDirectory=<%= current_path %>
+ExecStart=/bin/bash -l -c 'pnpm start'
+ExecReload=/bin/kill -TSTP $MAINPID
+ExecStop=/bin/kill -SIGTERM $MAINPID
+
+Restart=always
+
+
+StandardOutput=file:<%= shared_path %>/log/payloadcms.log
+StandardError=file:<%= shared_path %>/log/payloadcms-error.log
+
+SyslogIdentifier=<%= payloadcms_service_unit_name(@config_file) %>
+[Install]
+WantedBy=default.target
